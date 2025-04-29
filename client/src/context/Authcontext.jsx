@@ -29,7 +29,7 @@ export const AuthProvider = ({ children }) => {
                     }
 
                     // Set auth token header
-                    const response = await fetch('/api/auth/profile', {
+                    const response = await fetch('https://task-tracker-api-qve0.onrender.com/api/auth/profile', {
                         headers: {
                             'Authorization': `Bearer ${token}`
                         }
@@ -63,7 +63,7 @@ export const AuthProvider = ({ children }) => {
             setLoading(true);
             setError(null);
 
-            const response = await fetch('/api/auth/register', {
+            const response = await fetch('https://task-tracker-api-qve0.onrender.com/api/auth/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -96,7 +96,7 @@ export const AuthProvider = ({ children }) => {
             setLoading(true);
             setError(null);
 
-            const response = await fetch('/api/auth/login', {
+            const response = await fetch('https://task-tracker-api-qve0.onrender.com/api/auth/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
