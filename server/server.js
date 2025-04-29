@@ -26,7 +26,7 @@ app.use(cors({
 app.use(express.json());
 
 // Logging middleware in development
-if (process.env.NODE_ENV === "development") {
+if (process.env.NODE_ENV === "production") {
   app.use(morgan("dev"));
 }
 
