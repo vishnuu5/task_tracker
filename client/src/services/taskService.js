@@ -2,7 +2,7 @@
 
 // Get all tasks for a project
 export const getTasks = async (projectId, token) => {
-  const response = await fetch(`/api/projects/${projectId}/tasks`, {
+  const response = await fetch(`https://task-tracker-api-qve0.onrender.com/api/projects/${projectId}/tasks`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -17,7 +17,7 @@ export const getTasks = async (projectId, token) => {
 
 // Get task by ID
 export const getTaskById = async (projectId, taskId, token) => {
-  const response = await fetch(`/api/projects/${projectId}/tasks/${taskId}`, {
+  const response = await fetch(`https://task-tracker-api-qve0.onrender.com/api/projects/${projectId}/tasks/${taskId}`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -32,7 +32,7 @@ export const getTaskById = async (projectId, taskId, token) => {
 
 // Create task
 export const createTask = async (projectId, taskData, token) => {
-  const response = await fetch(`/api/projects/${projectId}/tasks`, {
+  const response = await fetch(`https://task-tracker-api-qve0.onrender.com/api/projects/${projectId}/tasks`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -51,7 +51,7 @@ export const createTask = async (projectId, taskData, token) => {
 
 // Update task
 export const updateTask = async (projectId, taskId, taskData, token) => {
-  const response = await fetch(`/api/projects/${projectId}/tasks/${taskId}`, {
+  const response = await fetch(`https://task-tracker-api-qve0.onrender.com/api/projects/${projectId}/tasks/${taskId}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -69,7 +69,7 @@ export const updateTask = async (projectId, taskId, taskData, token) => {
 
 // Delete task
 export const deleteTask = async (projectId, taskId, token) => {
-  const response = await fetch(`/api/projects/${projectId}/tasks/${taskId}`, {
+  const response = await fetch(`https://task-tracker-api-qve0.onrender.com/api/projects/${projectId}/tasks/${taskId}`, {
     method: "DELETE",
     headers: {
       Authorization: `Bearer ${token}`,
