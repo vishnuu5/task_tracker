@@ -2,7 +2,7 @@
 
 // Get all projects
 export const getProjects = async (token) => {
-  const response = await fetch("/api/projects", {
+  const response = await fetch("https://task-tracker-api-qve0.onrender.com/api/projects", {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -17,7 +17,7 @@ export const getProjects = async (token) => {
 
 // Get project by ID
 export const getProjectById = async (id, token) => {
-  const response = await fetch(`/api/projects/${id}`, {
+  const response = await fetch(`https://task-tracker-api-qve0.onrender.com/api/projects/${id}`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -32,7 +32,7 @@ export const getProjectById = async (id, token) => {
 
 // Create project
 export const createProject = async (projectData, token) => {
-  const response = await fetch("/api/projects", {
+  const response = await fetch("https://task-tracker-api-qve0.onrender.com/api/projects", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -51,7 +51,7 @@ export const createProject = async (projectData, token) => {
 
 // Update project
 export const updateProject = async (id, projectData, token) => {
-  const response = await fetch(`/api/projects/${id}`, {
+  const response = await fetch(`https://task-tracker-api-qve0.onrender.com/api/projects/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -69,7 +69,7 @@ export const updateProject = async (id, projectData, token) => {
 
 // Delete project
 export const deleteProject = async (id, token) => {
-  const response = await fetch(`/api/projects/${id}`, {
+  const response = await fetch(`https://task-tracker-api-qve0.onrender.com/api/projects/${id}`, {
     method: "DELETE",
     headers: {
       Authorization: `Bearer ${token}`,
